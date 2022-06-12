@@ -38,7 +38,6 @@ const batch = [
   mystery5,
 ];
 
-// Add your functions below:
 let invalidBatch = [];
 /// ----- validate function -----------------------------------------------------------------------------------------------//
 
@@ -81,14 +80,6 @@ const findInvalidCards = (cardArr) => {
       invalidBatch.push(currCard);
     }
   }
-  // cardArr.forEach((card) => {
-  //   let single = card;
-  //   console.log('here card - ', single);
-  //   if (!validateCred(single)) {
-
-  //     invalidBatch.push(single);
-  //   }
-  // });
   return invalidBatch;
 };
 
@@ -96,7 +87,7 @@ const findInvalidCards = (cardArr) => {
 //console.log("inavlid array - ", findInvalidCards(batch));
 console.log(
   findInvalidCards([invalid1, invalid2, invalid3, invalid4, invalid5])
-); // Should print all of the numbers
+);
 
 /// -----  End  Find Invalid card  function -----------------------------------------------------------------------------------------------//
 
@@ -106,7 +97,6 @@ const idInvalidCardCompanies = (invalidArr) => {
   let invalidCompanies = [];
   for (let i = 0; i < invalidArr.length; i++) {
     let singleArray = invalidArr[i][0];
-    //console.log("first index ", singleArray);
     switch (singleArray) {
       case 3:
         invalidCompanies.push("Amex");
@@ -128,6 +118,5 @@ const idInvalidCardCompanies = (invalidArr) => {
 };
 /// -----  End  Find Invalid card  function -----------------------------------------------------------------------------------------------//
 
-
-console.log(idInvalidCardCompanies([invalid1])); // Should print['visa']
+console.log(idInvalidCardCompanies([invalid1]));
 console.log(idInvalidCardCompanies(invalidBatch));
